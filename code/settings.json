@@ -1,0 +1,17 @@
+{
+    // Color theme
+    "workbench.colorTheme": "Tokyo Night Storm",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Tokyo Night Light",
+    "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+    
+    // Vscode neovim
+    "keyboard.dispatch": "keyCode",
+    
+    // trash
+    "git.autofetch": true,
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    }
+}

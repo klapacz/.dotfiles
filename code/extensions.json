@@ -1,0 +1,17 @@
+[
+    "enkia.tokyo-night",
+    "asvetliakov.vscode-neovim",
+    
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-polish",
+
+    "eamodio.gitlens",
+    "GitHub.vscode-pull-request-github",
+
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-rename-tag",
+
+    "Prisma.prisma",
+
+    "withfig.fig"
+]
