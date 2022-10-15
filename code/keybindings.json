@@ -1,0 +1,30 @@
+[
+  {
+    "key": "cmd+1",
+    "command": "vscode-harpoon.gotoEditor1"
+  },
+  {
+    "key": "cmd+2",
+    "command": "vscode-harpoon.gotoEditor2"
+  },
+  {
+    "key": "cmd+3",
+    "command": "vscode-harpoon.gotoEditor3"
+  },
+  {
+    "key": "cmd+4",
+    "command": "vscode-harpoon.gotoEditor4"
+  },
+  {
+    "key": "cmd+5",
+    "command": "vscode-harpoon.gotoEditor5"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "vscode-harpoon.addEditor"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "vscode-harpoon.editEditors"
+  }
+]

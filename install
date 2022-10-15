@@ -5,6 +5,7 @@ stow alacritty neovim tmux
 
 # Setup vscode
 ln -s "$(pwd)/code/settings.json" ~/Library/Application\ Support/Code/User
+ln -s "$(pwd)/code/keybindings.json" ~/Library/Application\ Support/Code/User
 
 for extension in $(jq -r ".[]" < code/extensions.json); do 
     code --install-extension "$extension"

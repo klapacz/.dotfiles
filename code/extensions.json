@@ -1,5 +1,6 @@
 [
     "enkia.tokyo-night",
+    "GitHub.github-vscode-theme",
     "asvetliakov.vscode-neovim",
     
     "streetsidesoftware.code-spell-checker",
@@ -13,5 +14,6 @@
 
     "Prisma.prisma",
 
-    "withfig.fig"
+    "withfig.fig",
+    "tobias-z.vscode-harpoon"
 ]
