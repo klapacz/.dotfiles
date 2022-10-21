@@ -6,10 +6,11 @@
     "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
     "workbench.tree.indent": 30,
     "editor.lineNumbers": "relative",
-    
+    "editor.formatOnSave": true,
+
     // Vscode neovim
     "keyboard.dispatch": "keyCode",
-    
+
     // trash
     "git.autofetch": true,
     "editor.accessibilitySupport": "off",
@@ -25,5 +26,9 @@
         "tsconfig.json": "tsconfig.*.json",
         "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
     },
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "codeQL.telemetry.enableTelemetry": false,
+    "git.confirmSync": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false
 }
