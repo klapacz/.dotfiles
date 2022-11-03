@@ -1,3 +1,10 @@
+require "paq" {
+  "savq/paq-nvim";
+  "ggandor/leap.nvim";
+}
+
+require('leap').add_default_mappings()
+
 -- Set leader key to space
 vim.g.mapleader = ' '
 

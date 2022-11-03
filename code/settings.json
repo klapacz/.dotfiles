@@ -7,10 +7,8 @@
     "workbench.tree.indent": 30,
     "editor.lineNumbers": "relative",
     "editor.formatOnSave": true,
-
     // Vscode neovim
     "keyboard.dispatch": "keyCode",
-
     // trash
     "git.autofetch": true,
     "editor.accessibilitySupport": "off",
@@ -30,5 +28,8 @@
     "codeQL.telemetry.enableTelemetry": false,
     "git.confirmSync": false,
     "gitlens.codeLens.enabled": false,
-    "gitlens.statusBar.enabled": false
+    "gitlens.statusBar.enabled": false,
+    "githubPullRequests.pullBranch": "never",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontFamily": "'Hack Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace"
 }
