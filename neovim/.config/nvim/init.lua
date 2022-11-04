@@ -5,6 +5,7 @@ if ok then
     "ggandor/leap.nvim";
     "jamessan/vim-gnupg",
     "folke/tokyonight.nvim",
+    "nvim-lualine/lualine.nvim"
   }
 end
 
@@ -40,6 +41,12 @@ if vim.g.vscode then
   vim.keymap.set("n", "H", "<cmd>Tabprev<cr>")
   vim.keymap.set("n", "L", "<cmd>Tabnext<cr>")
 else
+  -- lualine
+  local ok, _ = pcall(require, 'lualine')
+  if ok then
+    require('lualine').setup()
+  end
+
   vim.cmd[[colorscheme tokyonight]]
 
   vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
