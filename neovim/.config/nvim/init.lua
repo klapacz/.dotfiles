@@ -5,7 +5,7 @@ if ok then
     "ggandor/leap.nvim";
     "jamessan/vim-gnupg",
     "folke/tokyonight.nvim",
-    "nvim-lualine/lualine.nvim"
+    "nvim-lualine/lualine.nvim",
   }
 end
 
@@ -30,9 +30,9 @@ vim.opt.expandtab = false
 -- show whitespaes
 vim.opt.list = true
 
-vim.keymap.set({ "n", "v" }, "<leader>p", "\"_dP")
-vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d")
-vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y")
+vim.keymap.set({ "n", "x" }, "<leader>p", "\"_dP")
+vim.keymap.set({ "n", "x" }, "<leader>d", "\"_d")
+vim.keymap.set({ "n", "x" }, "<leader>y", "\"+y")
 
 if vim.g.vscode then
   vim.keymap.set("n", "<leader>w", "<cmd>Write<cr>")

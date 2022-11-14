@@ -1,35 +1,39 @@
 {
-    // Color theme
-    "workbench.colorTheme": "Tokyo Night Storm",
-    "window.autoDetectColorScheme": true,
-    "workbench.preferredLightColorTheme": "GitHub Light Default",
-    "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
-    "workbench.tree.indent": 30,
-    "editor.lineNumbers": "relative",
-    "editor.formatOnSave": true,
-    // Vscode neovim
-    "keyboard.dispatch": "keyCode",
-    // trash
-    "git.autofetch": true,
-    "editor.accessibilitySupport": "off",
-    "terminal.integrated.env.osx": {
-        "FIG_NEW_SESSION": "1"
-    },
-    "xstate.nestTypegenFiles": false,
-    "explorer.fileNesting.patterns": {
-        "*.ts": "${capture}.js",
-        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-        "*.jsx": "${capture}.js",
-        "*.tsx": "${capture}.ts",
-        "tsconfig.json": "tsconfig.*.json",
-        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
-    },
-    "workbench.startupEditor": "none",
-    "codeQL.telemetry.enableTelemetry": false,
-    "git.confirmSync": false,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.statusBar.enabled": false,
-    "githubPullRequests.pullBranch": "never",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "editor.fontFamily": "'Hack Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace"
+  // Color theme
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+  "workbench.tree.indent": 30,
+  "editor.lineNumbers": "relative",
+  "editor.formatOnSave": true,
+  // Vscode neovim
+  "keyboard.dispatch": "keyCode",
+  // trash
+  "git.autofetch": true,
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "xstate.nestTypegenFiles": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+  },
+  "workbench.startupEditor": "none",
+  "codeQL.telemetry.enableTelemetry": false,
+  "git.confirmSync": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "githubPullRequests.pullBranch": "never",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.fontFamily": "'Hack Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
