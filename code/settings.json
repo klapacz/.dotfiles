@@ -6,7 +6,12 @@
   "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
   "workbench.tree.indent": 30,
   "editor.lineNumbers": "relative",
+  // Formatting
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   // Vscode neovim
   "keyboard.dispatch": "keyCode",
   // trash
