@@ -36,6 +36,7 @@ vim.keymap.set({ "n", "x" }, "<leader>y", "\"+y")
 
 if vim.g.vscode then
   vim.keymap.set("n", "<leader>w", "<cmd>Write<cr>")
+  vim.keymap.set("n", "<leader>q", "<cmd>Quit<cr>")
 
   vim.keymap.set("n", "gN", "<cmd>Tabnew<cr>")
   vim.keymap.set("n", "H", "<cmd>Tabprev<cr>")
@@ -50,6 +51,7 @@ else
   vim.cmd[[colorscheme tokyonight]]
 
   vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
+  vim.keymap.set("n", "<leader>q", "<cmd>quit<cr>")
 
   vim.keymap.set("n", "gN", "<cmd>tabnew<cr>")
   vim.keymap.set("n", "H", "<cmd>tabprev<cr>")
