@@ -1,8 +1,3 @@
-set brew_bin /opt/homebrew/bin/brew
-if test -e $brew_bin
-	eval ($brew_bin shellenv)
-end
-
 starship init fish | source
 
 alias rm trash
@@ -15,5 +10,5 @@ set -gx EDITOR 'nvim'
 
 
 fish_vi_key_bindings
-bind -M insert \co 'commandline l; commandline -f execute'
+bind -M insert \co 'commandline n; commandline -f execute'
 

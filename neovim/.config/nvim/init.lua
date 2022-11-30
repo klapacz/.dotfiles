@@ -6,6 +6,7 @@ if ok then
     "jamessan/vim-gnupg",
     "folke/tokyonight.nvim",
     "nvim-lualine/lualine.nvim",
+    "nickeb96/fish.vim"
   }
 end
 
@@ -29,6 +30,9 @@ vim.opt.expandtab = false
 
 -- show whitespaes
 vim.opt.list = true
+
+-- insert date
+vim.keymap.set({ "n", "x" }, "<leader>id", "<cmd>r! date '+\\%Y-\\%m-\\%d'<cr>")
 
 vim.keymap.set({ "n", "x" }, "<leader>p", "\"_dP")
 vim.keymap.set({ "n", "x" }, "<leader>d", "\"_d")
