@@ -41,5 +41,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.defaultProfile.osx": "fish"
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "explorer.autoRevealExclude": {
+    "**/node_modules": true
+  }
 }

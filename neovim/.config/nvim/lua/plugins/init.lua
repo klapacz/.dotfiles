@@ -8,14 +8,20 @@ return require('packer').startup(function(use)
 
     use {
       "ggandor/leap.nvim",
-      config = function() require('leap').add_default_mappings() end,
+      config = function() require('leap').add_default_mappings() end
+    }
+
+    use {
+      "rafcamlet/nvim-luapad",
+      requires = "antoinemadec/FixCursorHold.nvim",
+      cmd = "Luapad"
     }
 
     use {
       "jamessan/vim-gnupg",
-      disabled = vim.g.vscode
+      cond = vim.g.vscode
     }
-    
+
     use {
       "nickeb96/fish.vim",
       disabled = vim.g.vscode
@@ -30,7 +36,9 @@ return require('packer').startup(function(use)
     use {
       "folke/tokyonight.nvim",
       disabled = vim.g.vscode,
-      config = function() vim.cmd[[colorscheme tokyonight]] end,
+      config = function()
+        vim.cmd[[colorscheme tokyonight]]
+      end,
     }
 
     if packer_bootstrap then
