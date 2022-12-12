@@ -44,5 +44,6 @@
   "terminal.integrated.defaultProfile.osx": "fish",
   "explorer.autoRevealExclude": {
     "**/node_modules": true
-  }
+  },
+  "excalidraw.theme": "auto"
 }
