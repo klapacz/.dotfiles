@@ -10,7 +10,10 @@ set -gx EDITOR 'nvim'
 
 
 fish_vi_key_bindings
+# <C-o> open nnn file manager
 bind -M insert \co 'commandline n; commandline -f execute'
+# <C-e> open finder on mac
+bind -M insert \ce 'commandline "open ."; commandline -f execute'
 
 
 abbr --add gpg-decrypt gpg --encrypt --recipient lapacz.kornel@gmail.com file
