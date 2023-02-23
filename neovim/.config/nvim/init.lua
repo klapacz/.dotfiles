@@ -21,6 +21,11 @@ vim.opt.rtp:prepend(lazypath)
 local no_code = vim.g.vscode == nil
 
 require('lazy').setup({
+  "ggandor/leap.nvim";
+  "jamessan/vim-gnupg",
+  -- "folke/tokyonight.nvim",
+  "nickeb96/fish.vim",
+
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -38,7 +43,6 @@ require('lazy').setup({
       'williamboman/mason-lspconfig.nvim',
 
       -- Useful status updates for LSP
-      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
       { 'j-hui/fidget.nvim', opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
@@ -103,7 +107,22 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
-  { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
+  {
+    'nvim-telescope/telescope.nvim',
+    version = '*',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+
+    opts = {
+      defaults = {
+        mappings = {
+          i = {
+            ['<C-u>'] = false,
+            ['<C-d>'] = false,
+          },
+        },
+      },
+    }
+  },
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
   -- Only load if `make` is available. Make sure you have the system
@@ -128,26 +147,13 @@ require('lazy').setup({
     end,
     cond = no_code,
   },
-
-  -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
-  --       These are some example plugins that I've included in the kickstart repository.
-  --       Uncomment any of the lines below to enable them.
-  -- require 'kickstart.plugins.autoformat',
-  -- require 'kickstart.plugins.debug',
-
-  -- NOTE: The import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
-  --    up-to-date with whatever is in the kickstart repo.
-  --
-  --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  --
-  --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
-  --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
-  -- { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
+
+-- Disable line wrapping
+vim.o.wrap = false
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -157,11 +163,7 @@ vim.wo.number = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
-
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
+vim.o.relativenumber = true
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -207,19 +209,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-
--- [[ Configure Telescope ]]
--- See `:help telescope` and `:help telescope.setup()`
-require('telescope').setup {
-  defaults = {
-    mappings = {
-      i = {
-        ['<C-u>'] = false,
-        ['<C-d>'] = false,
-      },
-    },
-  },
-}
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
