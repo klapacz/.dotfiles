@@ -1,6 +1,10 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- disable netrw at the very start of your init.lua (for nvim-tree)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -25,6 +29,19 @@ require('lazy').setup({
   "jamessan/vim-gnupg",
   -- "folke/tokyonight.nvim",
   "nickeb96/fish.vim",
+
+  {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    cond = no_code,
+    tag = 'nightly',
+    config = function ()
+      require('nvim-tree').setup()
+      vim.keymap.set("n", "<c-e>", "<cmd>NvimTreeToggle<cr>")
+    end
+  },
 
   -- Git related plugins
   'tpope/vim-fugitive',
