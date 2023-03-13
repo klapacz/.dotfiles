@@ -25,7 +25,13 @@ vim.opt.rtp:prepend(lazypath)
 local no_code = vim.g.vscode == nil
 
 require('lazy').setup({
-  "ggandor/leap.nvim";
+  {
+    "ggandor/leap.nvim",
+    config = function ()
+      require('leap').add_default_mappings()
+    end,
+  },
+
   "jamessan/vim-gnupg",
   "nickeb96/fish.vim",
 
