@@ -542,5 +542,27 @@ cmp.setup {
   },
 }
 
+vim.keymap.set("n", "<leader>C", "<cmd>cd ~/.config/nvim/ | edit init.lua<cr>", { desc = "[C]d into config and edit" })
+
+vim.keymap.set({ "n", "x" }, "<leader>p", "\"_dP", { desc = "[p]aste without yanking"})
+vim.keymap.set({ "n", "x" }, "<leader>d", "\"_d", { desc = "[d]elete without yanking"} )
+vim.keymap.set({ "n", "x" }, "<leader>y", "\"+y", { desc = "[y]ank to system clipboard"})
+
+if vim.g.vscode then
+  vim.keymap.set("n", "<leader>w", "<cmd>Write<cr>")
+  vim.keymap.set("n", "<leader>q", "<cmd>Quit<cr>")
+
+  vim.keymap.set("n", "gN", "<cmd>Tabnew<cr>")
+  vim.keymap.set("n", "H", "<cmd>Tabprev<cr>")
+  vim.keymap.set("n", "L", "<cmd>Tabnext<cr>")
+else
+  vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
+  vim.keymap.set("n", "<leader>q", "<cmd>quit<cr>")
+
+  vim.keymap.set("n", "gN", "<cmd>tabnew<cr>")
+  vim.keymap.set("n", "H", "<cmd>tabprev<cr>")
+  vim.keymap.set("n", "L", "<cmd>tabnext<cr>")
+end
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
