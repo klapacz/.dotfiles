@@ -155,6 +155,7 @@ require('lazy').setup({
   {
     'folke/tokyonight.nvim',
     priority = 1000,
+    cond = no_code,
     config = function()
       vim.cmd.colorscheme 'tokyonight'
     end,
