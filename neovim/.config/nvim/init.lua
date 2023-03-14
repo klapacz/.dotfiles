@@ -457,7 +457,8 @@ local on_attach = function(_, bufnr)
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+  -- TODO: what is signature documentation?
+  -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -562,7 +563,12 @@ cmp.setup {
   },
 }
 
-vim.keymap.set("n", "<leader>C", "<cmd>cd ~/.config/nvim/ | edit init.lua<cr>", { desc = "[C]d into config and edit" })
+vim.keymap.set("n", "<leader>C", "<cmd>tabnew | cd ~/.config/nvim/ | edit init.lua<cr>", { desc = "[C]d into config and edit" })
+
+vim.keymap.set("n", "<c-j>", "<c-w>j")
+vim.keymap.set("n", "<c-k>", "<c-w>k")
+vim.keymap.set("n", "<c-h>", "<c-w>h")
+vim.keymap.set("n", "<c-l>", "<c-w>l")
 
 vim.keymap.set({ "n", "x" }, "<leader>p", "\"_dP", { desc = "[p]aste without yanking"})
 vim.keymap.set({ "n", "x" }, "<leader>d", "\"_d", { desc = "[d]elete without yanking"} )
